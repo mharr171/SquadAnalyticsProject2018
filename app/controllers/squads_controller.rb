@@ -91,7 +91,7 @@ class SquadsController < ApplicationController
     puts "[ ~~~ -- . USER . -- ~~~ ]"
     puts user
     puts user.email
-    squad_datum = SquadDatum.find(user.id)
+    squad_datum = SquadDatum.where(user_id: user.id).first
 
     squad_datum.load_squad_data.each_line("\n").with_index(0) do |row, line_num|
       columns = row.split(';')
