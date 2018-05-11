@@ -1,0 +1,163 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Squad DNA</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Squad</th>
+      <th>Cor m</th>
+      <th>Cro m</th>
+      <th>Dri m</th>
+      <th>Fin m</th>
+      <th>Fir m</th>
+      <th>Fre m</th>
+      <th>Hea m</th>
+      <th>Lon m</th>
+      <th>Lth m</th>
+      <th>Mar m</th>
+      <th>Pas m</th>
+      <th>Pen m</th>
+      <th>Tck m</th>
+      <th>Tec m</th>
+      <th>Agg m</th>
+      <th>Ant m</th>
+      <th>Bra m</th>
+      <th>Cmp m</th>
+      <th>Cnt m</th>
+      <th>Dec m</th>
+      <th>Det m</th>
+      <th>Fla m</th>
+      <th>Ldr m</th>
+      <th>Otb m</th>
+      <th>Pos m</th>
+      <th>Tea m</th>
+      <th>Vis m</th>
+      <th>Wor m</th>
+      <th>Acc m</th>
+      <th>Agi m</th>
+      <th>Bal m</th>
+      <th>Jum m</th>
+      <th>Nat m</th>
+      <th>Pac m</th>
+      <th>Sta m</th>
+      <th>Str m</th>
+      <th>Aer m</th>
+      <th>Cmd m</th>
+      <th>Com m</th>
+      <th>Ecc m</th>
+      <th>Han m</th>
+      <th>Kic m</th>
+      <th>Onevone m</th>
+      <th>Ref m</th>
+      <th>Rus m</th>
+      <th>Pun m</th>
+      <th>Thr m</th>
+      <th>Key g mis h</th>
+      <th>Key shp h</th>
+      <th>Fir g mis h</th>
+      <th>Fir shp h</th>
+      <th>Rot g mis h</th>
+      <th>Rot shp h</th>
+      <th>Bac g mis h</th>
+      <th>Bac shp h</th>
+      <th>Hot g mis h</th>
+      <th>Hot shp h</th>
+      <th>You g mis h</th>
+      <th>You shp h</th>
+      <th>Low ris h</th>
+      <th>Nor ris h</th>
+      <th>Inc ris h</th>
+      <th>Hig ris h</th>
+      <th>Ver ris h</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @squad_dnas.each do |squad_dna| %>
+      <tr>
+        <td><%= squad_dna.squad.team_name %></td>
+        <td><%= squad_dna.cor_m %></td>
+        <td><%= squad_dna.cro_m %></td>
+        <td><%= squad_dna.dri_m %></td>
+        <td><%= squad_dna.fin_m %></td>
+        <td><%= squad_dna.fir_m %></td>
+        <td><%= squad_dna.fre_m %></td>
+        <td><%= squad_dna.hea_m %></td>
+        <td><%= squad_dna.lon_m %></td>
+        <td><%= squad_dna.lth_m %></td>
+        <td><%= squad_dna.mar_m %></td>
+        <td><%= squad_dna.pas_m %></td>
+        <td><%= squad_dna.pen_m %></td>
+        <td><%= squad_dna.tck_m %></td>
+        <td><%= squad_dna.tec_m %></td>
+        <td><%= squad_dna.agg_m %></td>
+        <td><%= squad_dna.ant_m %></td>
+        <td><%= squad_dna.bra_m %></td>
+        <td><%= squad_dna.cmp_m %></td>
+        <td><%= squad_dna.cnt_m %></td>
+        <td><%= squad_dna.dec_m %></td>
+        <td><%= squad_dna.det_m %></td>
+        <td><%= squad_dna.fla_m %></td>
+        <td><%= squad_dna.ldr_m %></td>
+        <td><%= squad_dna.otb_m %></td>
+        <td><%= squad_dna.pos_m %></td>
+        <td><%= squad_dna.tea_m %></td>
+        <td><%= squad_dna.vis_m %></td>
+        <td><%= squad_dna.wor_m %></td>
+        <td><%= squad_dna.acc_m %></td>
+        <td><%= squad_dna.agi_m %></td>
+        <td><%= squad_dna.bal_m %></td>
+        <td><%= squad_dna.jum_m %></td>
+        <td><%= squad_dna.nat_m %></td>
+        <td><%= squad_dna.pac_m %></td>
+        <td><%= squad_dna.sta_m %></td>
+        <td><%= squad_dna.str_m %></td>
+        <td><%= squad_dna.aer_m %></td>
+        <td><%= squad_dna.cmd_m %></td>
+        <td><%= squad_dna.com_m %></td>
+        <td><%= squad_dna.ecc_m %></td>
+        <td><%= squad_dna.han_m %></td>
+        <td><%= squad_dna.kic_m %></td>
+        <td><%= squad_dna.onevone_m %></td>
+        <td><%= squad_dna.ref_m %></td>
+        <td><%= squad_dna.rus_m %></td>
+        <td><%= squad_dna.pun_m %></td>
+        <td><%= squad_dna.thr_m %></td>
+        <td><%= squad_dna.key_g_mis_h %></td>
+        <td><%= squad_dna.key_shp_h %></td>
+        <td><%= squad_dna.fir_g_mis_h %></td>
+        <td><%= squad_dna.fir_shp_h %></td>
+        <td><%= squad_dna.rot_g_mis_h %></td>
+        <td><%= squad_dna.rot_shp_h %></td>
+        <td><%= squad_dna.bac_g_mis_h %></td>
+        <td><%= squad_dna.bac_shp_h %></td>
+        <td><%= squad_dna.hot_g_mis_h %></td>
+        <td><%= squad_dna.hot_shp_h %></td>
+        <td><%= squad_dna.you_g_mis_h %></td>
+        <td><%= squad_dna.you_shp_h %></td>
+        <td><%= squad_dna.low_ris_h %></td>
+        <td><%= squad_dna.nor_ris_h %></td>
+        <td><%= squad_dna.inc_ris_h %></td>
+        <td><%= squad_dna.hig_ris_h %></td>
+        <td><%= squad_dna.ver_ris_h %></td>
+        <td><%= link_to 'Show', squad_squad_dna_path(params[:squad_id],squad_dna) %></td>
+        <td><%= link_to 'Edit', edit_squad_squad_dna_path(params[:squad_id],squad_dna) %></td>
+        <td><%= link_to 'Destroy', squad_squad_dna_path(params[:squad_id],squad_dna), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+<% if @squad_dnas.length == 1 %>
+  -
+<% else %>
+  <%= link_to 'New Squad Dna', new_squad_squad_dna_path(@squad) %>
+<% end %>
+
+<%= link_to 'Back to Squad', squad_path(@squad) %>

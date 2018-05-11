@@ -1,0 +1,31 @@
+<%= form_with(model: squad_datum, local: true) do |form| %>
+  <% if squad_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(squad_datum.errors.count, "error") %> prohibited this squad_datum from being saved:</h2>
+
+      <ul>
+      <% squad_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :load_squad_data %>
+    <%= form.text_area :load_squad_data, id: :squad_datum_load_squad_data %>
+  </div>
+
+<!--   <div class="field">
+    < %= form.label :update_squad_data %>
+    < %= form.text_area :update_squad_data, id: :squad_datum_update_squad_data %>
+  </div> -->
+
+  <div class="field">
+    <%= form.hidden_field :user_id, id: :squad_datum_user_id, value: @user.id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

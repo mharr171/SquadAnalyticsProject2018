@@ -1,0 +1,340 @@
+<h1>Player#index</h1>
+<p>Find me in app/views/player/index.html.erb</p>
+
+<%= button_to "Unsort", player_index_path %>
+
+<%= button_to 'Delete Squad', loadfiles_path, :method=> "loadfiles" %>
+
+<%= button_to 'Load Squad', loadfiles_path, :method=> "loadfiles" %>
+<%= button_to 'Update Squad', updatefiles_path, :method=> "updatefiles" %>
+
+<%= button_to 'Update Ratings', ratings_path, :method=> "ratings" %>
+
+<%= button_to 'Load Shortlisted', checkplayerratings_path, :method=> "checkplayerratings" %>
+
+<table class='table'>
+  <thead class='thead-dark'>
+    <tr>
+      <th>UID</th>
+      <th>Name</th>
+      <th>Squad Rating</th>
+      <th>Match Rating</th>
+      <!-- <th>Full/Part Time</th>
+      <th>Contract Type</th>
+      <th>Wage (Salary)</th>
+      <th>Appearance Fee</th>
+      <th>Unused Sub Fee</th>
+      <th>Contract Expiry Date</th>
+      <th>New Contract Offer Status</th>
+      <th>New Wage</th>
+      <th>New Contract Date</th>
+      <th>Wage after Club League Games</th>
+      <th>Number of Club League Games Needed for New Wage</th>
+      <th>Loan Expiry Date</th>
+      <th>Injury Date</th>
+      <th>Injury Desc.</th>
+      <th>Injury Time Out</th> -->
+      <th>Condition</th>
+      <th>Match Shape</th>
+      <!-- <th>Sharpness Desc.</th>
+      <th>Player Status Desc.</th>
+      <th>Date of Birth</th> -->
+      <!-- <th>Nationality</th>
+      <th>Second Nationality</th> -->
+      <!-- <th>Height</th>
+      <th>Weight</th> -->
+      <th>Position</th>
+      <th>Second Position</th>
+      <!-- <th>Personality</th>
+      <th>Media Handling</th>
+      <th>Preferred Foot</th>
+      <th>Left Foot</th>
+      <th>Right Foot</th>
+      <th>Morale</th>
+      <th>Match Load</th>
+      <th>Training Load</th>
+      <th>Injury Susceptibility</th> -->
+      <th>Overall Risk</th>
+      <!-- <th>Workload</th>
+      <th>Training Happiness</th>
+      <th>Training Happiness Desc.</th>
+      <th>Training Position/Role</th>
+      <th>Training Addition Focus</th>
+      <th>Loan Status</th>
+      <th>On Loan From</th> -->
+      <th>Squad Status</th>
+      <!-- <th>Transfer Status</th>
+      <th>Value</th>
+      <th>Corners</th>
+      <th>Crossing</th>
+      <th>Dribbling</th>
+      <th>Finishing</th>
+      <th>First Touch</th>
+      <th>Free Kicks</th>
+      <th>Heading</th>
+      <th>Long Shots</th>
+      <th>Long Throws</th>
+      <th>Marking</th>
+      <th>Passing</th>
+      <th>Penalty Taking</th>
+      <th>Tackling</th>
+      <th>Technical</th>
+      <th>Aggression</th>
+      <th>Anticipation</th>
+      <th>Bravery</th>
+      <th>Composure</th>
+      <th>Concentration</th>
+      <th>Decisions</th>
+      <th>Determination</th>
+      <th>Flair</th>
+      <th>Leadership</th>
+      <th>Off The Ball</th>
+      <th>Positioning</th>
+      <th>Teamwork</th>
+      <th>Vision</th>
+      <th>Workrate</th>
+      <th>Acceleration</th>
+      <th>Agility</th>
+      <th>Balance</th>
+      <th>Jumping</th>
+      <th>Natural Fitness</th>
+      <th>Pace</th>
+      <th>Stamina</th>
+      <th>Strength</th>
+      <th>Aerial Reach</th>
+      <th>Command of Area</th>
+      <th>Communication</th>
+      <th>Eccentricity</th>
+      <th>Handling</th>
+      <th>Kicking</th>
+      <th>1V1</th>
+      <th>Reflexes</th>
+      <th>Rushing</th>
+      <th>Punching</th>
+      <th>Throwing</th>
+      <th>Current Ability</th>
+      <th>Potential Ability</th> -->
+      <!-- <th>Current Reputation</th>
+      <th>Home Reputation</th>
+      <th>World Reputation</th> -->
+      <!-- <th>Yellow Cards</th>
+      <th>Team Goals /90</th>
+      <th>Team Conceded /90</th>
+      <th>Tackles /g</th>
+      <th>Tackles Ratio</th>
+      <th>Starts</th>
+      <th>Shutouts</th>
+      <th>Shots /90</th>
+      <th>Shots On Target /90</th>
+      <th>Saves Tipped</th>
+      <th>Saves Parried</th>
+      <th>Saves Held</th>
+      <th>Red Cards</th>
+      <th>Player of the Match</th>
+      <th>Points Won /g</th>
+      <th>Penalties Scored Ratio</th>
+      <th>Pass Completion Ratio</th>
+      <th>Pass Attempts /90</th>
+      <th>Offsides</th>
+      <th>Mistakes</th>
+      <th>Mistakes Leading to Goal</th>
+      <th>Minutes Since Last Goal</th>
+      <th>Minutes Since Conceding</th>
+      <th>Minutes /g</th>
+      <th>Minutes</th>
+      <th>Last 5 Games</th>
+      <th>Key Tackles</th>
+      <th>Key Passes /90</th>
+      <th>Key Passes</th>
+      <th>Key Headers</th>
+      <th>Interceptions /90</th>
+      <th>Header Ratio</th>
+      <th>Header Won /90</th>
+      <th>Goals /90</th>
+      <th>Goals Allowed /90</th>
+      <th>Goals Allowed</th>
+      <th>Goals</th> -->
+      <th>Games Missed in a Row</th>
+      <!-- <th>Games Won</th>
+      <th>Games Lost</th>
+      <th>Games Drawn</th>
+      <th>Game Win Ratio</th>
+      <th>Fouls Against</th>
+      <th>Fouls</th>
+      <th>Dribbles /g</th>
+      <th>Distance /90</th>
+      <th>Cross Completed Ratio</th>
+      <th>Chances Created /90</th>
+      <th>Average Rating</th>
+      <th>Average Minutes Per Goal</th>
+      <th>Assists /90</th>
+      <th>Assists</th>
+      <th>Appearances</th>
+      <th>Passes Completed /90</th> -->
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @players.each do |player| %>
+      <tr>
+        <td><%= player.uid %></td>
+        <td><%= player.name %></td>
+        <td><%= player.sqd_rat %></td>
+        <td><%= player.mtc_rat %></td>
+        <!-- <td>< %= player.f_pt %></td>
+        <td>< %= player.contract_type %></td>
+        <td>< %= player.salary %></td>
+        <td>< %= player.appearance_fee %></td>
+        <td>< %= player.unused_sub_fee %></td>
+        <td>< %= player.expires %></td>
+        <td>< %= player.offer_status %></td>
+        <td>< %= player.new_wage %></td>
+        <td>< %= player.new_date %></td>
+        <td>< %= player.waclg %></td>
+        <td>< %= player.waclg_num %></td>
+        <td>< %= player.loan_expires %></td>
+        <td>< %= player.injured_on %></td>
+        <td>< %= player.injury %></td>
+        <td>< %= player.time_out %></td> -->
+        <td><%= player.condition %></td>
+        <td><%= player.mtc_shp %></td>
+        <!-- <td>< %= player.sharpness %></td>
+        <td>< %= player.player_status %></td>
+        <td>< %= player.dob %></td> -->
+        <!-- <td>< %= player.nat %></td>
+        <td>< %= player.second_nat %></td> -->
+        <!-- <td>< %= player.height %></td>
+        <td>< %= player.weight %></td> -->
+        <td><%= player.position %></td>
+        <td><%= player.second_position %></td>
+        <!-- <td>< %= player.personality %></td>
+        <td>< %= player.media_handling %></td>
+        <td>< %= player.preferred_foot %></td>
+        <td>< %= player.left_foot %></td>
+        <td>< %= player.right_foot %></td>
+        <td>< %= player.morale %></td>
+        <td>< %= player.match_load %></td>
+        <td>< %= player.training_load %></td>
+        <td>< %= player.injury_susceptibility %></td> -->
+        <td><%= player.overall_risk %></td>
+        <!-- <td>< %= player.workload %></td>
+        <td>< %= player.training_happiness %></td>
+        <td>< %= player.training_happiness_details %></td>
+        <td>< %= player.position_role %></td>
+        <td>< %= player.additional_focus %></td>
+        <td>< %= player.loan_status %></td>
+        <td>< %= player.on_loan_from %></td> -->
+        <td><%= player.squad_status %></td>
+        <!-- <td>< %= player.transfer_status %></td>
+        <td>< %= player.value %></td>
+        <td>< %= player.cor %></td>
+        <td>< %= player.cro %></td>
+        <td>< %= player.dri %></td>
+        <td>< %= player.fin %></td>
+        <td>< %= player.fir %></td>
+        <td>< %= player.fre %></td>
+        <td>< %= player.hea %></td>
+        <td>< %= player.lon %></td>
+        <td>< %= player.lth %></td>
+        <td>< %= player.mar %></td>
+        <td>< %= player.pas %></td>
+        <td>< %= player.pen %></td>
+        <td>< %= player.tck %></td>
+        <td>< %= player.tec %></td>
+        <td>< %= player.agg %></td>
+        <td>< %= player.ant %></td>
+        <td>< %= player.bra %></td>
+        <td>< %= player.cmp %></td>
+        <td>< %= player.cnt %></td>
+        <td>< %= player.dec %></td>
+        <td>< %= player.det %></td>
+        <td>< %= player.fla %></td>
+        <td>< %= player.ldr %></td>
+        <td>< %= player.otb %></td>
+        <td>< %= player.pos %></td>
+        <td>< %= player.tea %></td>
+        <td>< %= player.vis %></td>
+        <td>< %= player.wor %></td>
+        <td>< %= player.acc %></td>
+        <td>< %= player.agi %></td>
+        <td>< %= player.bal %></td>
+        <td>< %= player.jum %></td>
+        <td>< %= player.nat %></td>
+        <td>< %= player.pac %></td>
+        <td>< %= player.sta %></td>
+        <td>< %= player.str %></td>
+        <td>< %= player.aer %></td>
+        <td>< %= player.cmd %></td>
+        <td>< %= player.com %></td>
+        <td>< %= player.ecc %></td>
+        <td>< %= player.han %></td>
+        <td>< %= player.kic %></td>
+        <td>< %= player.onevone %></td>
+        <td>< %= player.ref %></td>
+        <td>< %= player.rus %></td>
+        <td>< %= player.pun %></td>
+        <td>< %= player.thr %></td>
+        <td>< %= player.ca %></td>
+        <td>< %= player.pa %></td> -->
+        <!-- <td>< %= player.cr %></td>
+        <td>< %= player.hr %></td>
+        <td>< %= player.wr %></td> -->
+        <!-- <td>< %= player.yel %></td>
+        <td>< %= player.tgls_90 %></td>
+        <td>< %= player.tcon_90 %></td>
+        <td>< %= player.tck %></td>
+        <td>< %= player.tck_r %></td>
+        <td>< %= player.starts %></td>
+        <td>< %= player.shutouts %></td>
+        <td>< %= player.shot_90 %></td>
+        <td>< %= player.sht_90 %></td>
+        <td>< %= player.svt %></td>
+        <td>< %= player.svp %></td>
+        <td>< %= player.svh %></td>
+        <td>< %= player.red %></td>
+        <td>< %= player.pom %></td>
+        <td>< %= player.pts_gm %></td>
+        <td>< %= player.pen_r %></td>
+        <td>< %= player.pas_perc %></td>
+        <td>< %= player.ps_a_90 %></td>
+        <td>< %= player.off %></td>
+        <td>< %= player.mstks %></td>
+        <td>< %= player.gl_mst %></td>
+        <td>< %= player.last_gl %></td>
+        <td>< %= player.last_c %></td>
+        <td>< %= player.mins_gm %></td>
+        <td>< %= player.mins %></td>
+        <td>< %= player.last_5_games %></td>
+        <td>< %= player.k_tck %></td>
+        <td>< %= player.k_ps_90 %></td>
+        <td>< %= player.k_pas %></td>
+        <td>< %= player.k_hdrs %></td>
+        <td>< %= player.int_90 %></td>
+        <td>< %= player.hdr_perc %></td>
+        <td>< %= player.hdrs_w_90 %></td>
+        <td>< %= player.gls_90 %></td>
+        <td>< %= player.all_90 %></td>
+        <td>< %= player.conc %></td>
+        <td>< %= player.gls %></td> -->
+        <td><%= player.g_mis %></td>
+        <!-- <td>< %= player.won %></td>
+        <td>< %= player.lost %></td>
+        <td>< %= player.d %></td>
+        <td>< %= player.gwin %></td>
+        <td>< %= player.fa %></td>
+        <td>< %= player.fls %></td>
+        <td>< %= player.drbpg %></td>
+        <td>< %= player.dist_90 %></td>
+        <td>< %= player.cr_c_a %></td>
+        <td>< %= player.ch_c_90 %></td>
+        <td>< %= player.av_rat %></td>
+        <td>< %= player.mins_gl %></td>
+        <td>< %= player.asts_90 %></td>
+        <td>< %= player.ast %></td>
+        <td>< %= player.apps %></td>
+        <td>< %= player.ps_c_90 %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>

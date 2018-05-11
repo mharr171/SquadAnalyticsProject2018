@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @squad.team_name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @squad.user.email %>
+</p>
+
+
+<% if @squad.players.length >=1 %>
+	<%= button_to 'Delete Squad Data', squad_delete_squad_datum_path(@squad) %>
+<% else %>
+	<%= button_to 'Import Squad Data', squad_import_squad_datum_path(@squad) %>
+<% end %>
+
+
+<% if @squad_dna.empty? %>
+	<%= link_to 'Squad DNA', squad_squad_dnas_path(@squad) %>
+<% else %>
+	<%= link_to 'Squad DNA', squad_squad_dnas_path(@squad) %><%= button_to 'Calculate Ratings', squad_calculate_ratings_path(@squad) %>
+<% end %>
+
+
+
+
+
+
+<%= render 'table', players: @players %>
+
+<%= link_to 'Edit', edit_squad_path(@squad) %> |
+<%= link_to 'Back', squads_path %>

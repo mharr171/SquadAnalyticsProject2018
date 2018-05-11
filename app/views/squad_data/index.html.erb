@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Squad Data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Load squad data</th>
+      <!-- <th>Update squad data</th> -->
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @squad_data.each do |squad_datum| %>
+      <tr>
+        <td><%= simple_format(squad_datum.load_squad_data) %></td>
+        <!-- <td>< %= simple_format(squad_datum.update_squad_data) %></td> -->
+        <td><%= link_to 'Show', squad_datum %></td>
+        <td><%= link_to 'Edit', edit_squad_datum_path(squad_datum) %></td>
+        <td><%= link_to 'Destroy', squad_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if @squad_data.length == 1 %>
+  -
+<% else %>
+  <%= link_to 'New Squad Datum', new_squad_datum_path %>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Load squad data:</strong>
+  <%= simple_format(@squad_datum.load_squad_data) %>
+</p>
+
+<p>
+  <strong>Update squad data:</strong>
+  <%= simple_format(@squad_datum.update_squad_data) %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  Hidden
+</p>
+
+<%= link_to 'Edit', edit_squad_datum_path(@squad_datum) %> |
+<%= link_to 'Back', squad_data_path %>

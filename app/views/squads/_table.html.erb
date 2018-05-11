@@ -1,0 +1,146 @@
+<table>
+  <thead>
+    <tr>
+      <th>UID</th>
+      <th>Name</th>
+      <th>Squad Rating</th>
+      <th>Match Rating</th>
+
+      <th>Squad Status</th>
+      <th>Age</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Position</th>
+      <th>Secondary Position</th>
+      <th>Pro</th>
+      <th>Con</th>
+      <th>Condition</th>
+      <th>Match Sharpness</th>
+      <th>Games Missed in a Row</th>
+      <th>Overall Risk</th>
+      <th>Injury</th>
+      <th>Time Out</th>
+      
+      <th>Corners</th>
+      <th>Crossing</th>
+      <th>Dribbling</th>
+      <th>Finishing</th>
+      <th>First Touch</th>
+      <th>Free Kicks</th>
+      <th>Heading</th>
+      <th>Long Shots</th>
+      <th>Long Throws</th>
+      <th>Marking</th>
+      <th>Passing</th>
+      <th>Penalty Taking</th>
+      <th>Tackling</th>
+      <th>Technical</th>
+      <th>Aggression</th>
+      <th>Anticipation</th>
+      <th>Bravery</th>
+      <th>Composure</th>
+      <th>Concentration</th>
+      <th>Decisions</th>
+      <th>Determination</th>
+      <th>Flair</th>
+      <th>Leadership</th>
+      <th>Off The Ball</th>
+      <th>Positioning</th>
+      <th>Teamwork</th>
+      <th>Vision</th>
+      <th>Workrate</th>
+      <th>Acceleration</th>
+      <th>Agility</th>
+      <th>Balance</th>
+      <th>Jumping</th>
+      <th>Natural Fitness</th>
+      <th>Pace</th>
+      <th>Stamina</th>
+      <th>Strength</th>
+      <th>Aerial Reach</th>
+      <th>Command of Area</th>
+      <th>Communication</th>
+      <th>Eccentricity</th>
+      <th>Handling</th>
+      <th>Kicking</th>
+      <th>1V1</th>
+      <th>Reflexes</th>
+      <th>Rushing</th>
+      <th>Punching</th>
+      <th>Throwing</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% players.each do |player| %>
+      <tr>
+        <td><%= player.uid %></td>
+        <td><%= player.name %></td>
+        <td><%= number_with_precision(player.sqd_rat, :precision => 1) %></td>
+        <td><%= number_with_precision(player.mtc_rat, :precision => 1) %></td>
+        <td><%= player.squad_status %></td>
+        <td><%= player.age %></td>
+        <td><%= player.height %></td>
+        <td><%= player.weight %></td>
+        <td><%= player.position %></td>
+        <td><%= player.second_position %></td>
+        <td><%= player.strength %></td>
+        <td><%= player.weakness %></td>
+        <td><%= player.condition %></td>
+        <td><%= player.mtc_shp %></td>
+        <td><%= player.g_mis %></td>
+        <td><%= player.overall_risk %></td>
+        <td><%= player.injury %></td>
+        <td><%= player.time_out %></td>
+        <td><%= player.cor %></td>
+        <td><%= player.cro %></td>
+        <td><%= player.dri %></td>
+        <td><%= player.fin %></td>
+        <td><%= player.fir %></td>
+        <td><%= player.fre %></td>
+        <td><%= player.hea %></td>
+        <td><%= player.lon %></td>
+        <td><%= player.lth %></td>
+        <td><%= player.mar %></td>
+        <td><%= player.pas %></td>
+        <td><%= player.pen %></td>
+        <td><%= player.tck %></td>
+        <td><%= player.tec %></td>
+        <td><%= player.agg %></td>
+        <td><%= player.ant %></td>
+        <td><%= player.bra %></td>
+        <td><%= player.cmp %></td>
+        <td><%= player.cnt %></td>
+        <td><%= player.dec %></td>
+        <td><%= player.det %></td>
+        <td><%= player.fla %></td>
+        <td><%= player.ldr %></td>
+        <td><%= player.otb %></td>
+        <td><%= player.pos %></td>
+        <td><%= player.tea %></td>
+        <td><%= player.vis %></td>
+        <td><%= player.wor %></td>
+        <td><%= player.acc %></td>
+        <td><%= player.agi %></td>
+        <td><%= player.bal %></td>
+        <td><%= player.jum %></td>
+        <td><%= player.nat %></td>
+        <td><%= player.pac %></td>
+        <td><%= player.sta %></td>
+        <td><%= player.str %></td>
+        <td><%= player.aer %></td>
+        <td><%= player.cmd %></td>
+        <td><%= player.com %></td>
+        <td><%= player.ecc %></td>
+        <td><%= player.han %></td>
+        <td><%= player.kic %></td>
+        <td><%= player.onevone %></td>
+        <td><%= player.ref %></td>
+        <td><%= player.rus %></td>
+        <td><%= player.pun %></td>
+        <td><%= player.thr %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

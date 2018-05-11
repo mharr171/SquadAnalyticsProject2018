@@ -1,0 +1,30 @@
+<% if user_signed_in? %>
+	<ul>
+	  <li>
+	    Signed in as <%= link_to current_user.email, edit_user_registration_path(current_user) %>
+	  </li>
+	  <li>
+	    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+	  </li>
+		<li>
+		<%= link_to "View Squad", player_index_path %>
+		</li>
+		<li>
+		<%= link_to "Squad Data", squad_data_path %>
+		</li>
+		<li>
+		<%= link_to "Squads", squads_path %>
+		</li>
+	</ul>
+<% else %>
+	<h1>Welcome to Squad Analytics Project 2018</h1>
+
+	<h3>What is SAP18?</h3>
+	<p>
+	  SAP18 is a squad analytics project for Football Manager 2018. It uses exported tables from the squad views in-game and aims to offer new ways to view that data.
+	</p>
+
+	<%= link_to "Sign Up", new_user_registration_path %>
+	<br />
+	<small><%= link_to "Sign in", new_user_session_path %></small>
+<% end %>
