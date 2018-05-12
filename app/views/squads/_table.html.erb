@@ -1,73 +1,71 @@
 <table>
   <thead>
     <tr>
-      <th>UID</th>
-      <th>Name</th>
-      <th>Squad Rating</th>
-      <th>Match Rating</th>
-
-      <th>Squad Status</th>
-      <th>Age</th>
-      <th>Height</th>
-      <th>Weight</th>
-      <th>Position</th>
-      <th>Secondary Position</th>
-      <th>Pro</th>
-      <th>Con</th>
-      <th>Condition</th>
-      <th>Match Sharpness</th>
-      <th>Games Missed in a Row</th>
-      <th>Overall Risk</th>
-      <th>Injury</th>
-      <th>Time Out</th>
-      
-      <th>Corners</th>
-      <th>Crossing</th>
-      <th>Dribbling</th>
-      <th>Finishing</th>
-      <th>First Touch</th>
-      <th>Free Kicks</th>
-      <th>Heading</th>
-      <th>Long Shots</th>
-      <th>Long Throws</th>
-      <th>Marking</th>
-      <th>Passing</th>
-      <th>Penalty Taking</th>
-      <th>Tackling</th>
-      <th>Technical</th>
-      <th>Aggression</th>
-      <th>Anticipation</th>
-      <th>Bravery</th>
-      <th>Composure</th>
-      <th>Concentration</th>
-      <th>Decisions</th>
-      <th>Determination</th>
-      <th>Flair</th>
-      <th>Leadership</th>
-      <th>Off The Ball</th>
-      <th>Positioning</th>
-      <th>Teamwork</th>
-      <th>Vision</th>
-      <th>Workrate</th>
-      <th>Acceleration</th>
-      <th>Agility</th>
-      <th>Balance</th>
-      <th>Jumping</th>
-      <th>Natural Fitness</th>
-      <th>Pace</th>
-      <th>Stamina</th>
-      <th>Strength</th>
-      <th>Aerial Reach</th>
-      <th>Command of Area</th>
-      <th>Communication</th>
-      <th>Eccentricity</th>
-      <th>Handling</th>
-      <th>Kicking</th>
-      <th>1V1</th>
-      <th>Reflexes</th>
-      <th>Rushing</th>
-      <th>Punching</th>
-      <th>Throwing</th>
+      <th><%= sort_link "uid", "UID" %></th>
+      <th><%= sort_link "name", "Name" %></th>
+      <th><%= sort_link "sqd_rat", "Squad Rating" %></th>
+      <th><%= sort_link "mtc_rat", "Match Rating" %></th>
+      <th><%= sort_link "squad_status", "Squad Status" %></th>
+      <th><%= sort_link "age", "Age" %></th>
+      <th><%= sort_link "height", "Height" %></th>
+      <th><%= sort_link "weight", "Weight" %></th>
+      <th><%= sort_link "position", "Position" %></th>
+      <th><%= sort_link "second_position", "Secondary Position" %></th>
+      <th><%= sort_link "strength", "Pro" %></th>
+      <th><%= sort_link "weakness", "Con" %></th>
+      <th><%= sort_link "condition", "Condition" %></th>
+      <th><%= sort_link "mtc_shp", "Match Sharpness" %></th>
+      <th><%= sort_link "g_mis", "Games Missed in a Row" %></th>
+      <th><%= sort_link "overall_risk", "Overall Risk" %></th>
+      <th><%= sort_link "injury", "Injury" %></th>
+      <th><%= sort_link "time_out", "Time Out" %></th>
+      <th><%= sort_link "cor", "Corners" %></th>
+      <th><%= sort_link "cro", "Crossing" %></th>
+      <th><%= sort_link "dri", "Dribbling" %></th>
+      <th><%= sort_link "fin", "Finishing" %></th>
+      <th><%= sort_link "fir", "First Touch" %></th>
+      <th><%= sort_link "fre", "Free Kicks" %></th>
+      <th><%= sort_link "hea", "Heading" %></th>
+      <th><%= sort_link "lon", "Long Shots" %></th>
+      <th><%= sort_link "lth", "Long Throws" %></th>
+      <th><%= sort_link "mar", "Marking" %></th>
+      <th><%= sort_link "pas", "Passing" %></th>
+      <th><%= sort_link "pen", "Penalty Taking" %></th>
+      <th><%= sort_link "tck", "Tackling" %></th>
+      <th><%= sort_link "tec", "Technical" %></th>
+      <th><%= sort_link "agg", "Aggression" %></th>
+      <th><%= sort_link "ant", "Anticipation" %></th>
+      <th><%= sort_link "bra", "Bravery" %></th>
+      <th><%= sort_link "cmp", "Composure" %></th>
+      <th><%= sort_link "con", "Concentration" %></th>
+      <th><%= sort_link "dec", "Decisions" %></th>
+      <th><%= sort_link "det", "Determination" %></th>
+      <th><%= sort_link "fla", "Flair" %></th>
+      <th><%= sort_link "lea", "Leadership" %></th>
+      <th><%= sort_link "otb", "Off The Ball" %></th>
+      <th><%= sort_link "pos", "Positioning" %></th>
+      <th><%= sort_link "tea", "Teamwork" %></th>
+      <th><%= sort_link "vis", "Vision" %></th>
+      <th><%= sort_link "wor", "Workrate" %></th>
+      <th><%= sort_link "acc", "Acceleration" %></th>
+      <th><%= sort_link "agi", "Agility" %></th>
+      <th><%= sort_link "bal", "Balance" %></th>
+      <th><%= sort_link "jum", "Jumping" %></th>
+      <th><%= sort_link "nat", "Natural Fitness" %></th>
+      <th><%= sort_link "pac", "Pace" %></th>
+      <th><%= sort_link "sta", "Stamina" %></th>
+      <th><%= sort_link "str", "Strength" %></th>
+      <th><%= sort_link "aer", "Aerial Reach" %></th>
+      <th><%= sort_link "cmd", "Command of Area" %></th>
+      <th><%= sort_link "comm", "Communication" %></th>
+      <th><%= sort_link "ecc", "Eccentricity" %></th>
+      <th><%= sort_link "han", "Handling" %></th>
+      <th><%= sort_link "kic", "Kicking" %></th>
+      <th><%= sort_link "onevone", "1V1" %></th>
+      <th><%= sort_link "ref", "Reflexes" %></th>
+      <th><%= sort_link "rus", "Rushing" %></th>
+      <th><%= sort_link "pun", "Punching" %></th>
+      <th><%= sort_link "thr", "Throwing" %></th>
     </tr>
   </thead>
 

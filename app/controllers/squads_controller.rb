@@ -1,7 +1,7 @@
 class SquadsController < ApplicationController
   before_action :set_squad, only: [:show, :edit, :update, :destroy]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  
+  helper_method :sort_column, :sort_direction  
 
   # GET /squads
   # GET /squads.json
@@ -13,10 +13,8 @@ class SquadsController < ApplicationController
   # GET /squads/1.json
   def show
     @squad_datum = @user.squad_datum
-    @players = @squad.players
-    if @players.length >= 0
-      @players = @players.sort_by {|p| -p.mtc_rat}
-    end
+    @players = @squad.players.order("#{sort_column} #{sort_direction}")
+
     @squad_dna = SquadDna.where(squad_id: @squad.id)
   end
 
@@ -320,6 +318,18 @@ class SquadsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def squad_params
       params.require(:squad).permit(:user_id,:team_name)
+    end
+
+    def sortable_columns
+      ["uid", "name", "sqd_rat", "mtc_rat", "squad_status", "age", "height", "weight", "position", "secondary_position", "strength", "weakness", "condition", "mtc_shp", "g_mis", "overall_risk", "injury", "time_out", "cor", "cro", "dri", "fin", "fir", "fre", "hea", "lon", "lth", "mar", "pas", "pen", "tck", "tec", "agg", "ant", "bra", "cmp", "con", "dec", "det", "fla", "ldr", "otb", "pos", "tea", "vis", "wor", "acc", "agi", "bal", "jum", "nat", "pac", "sta", "str", "aer", "cmd", "com", "ecc", "han", "kic", "onevone", "ref", "rus", "pun", "thr"]
+    end
+
+    def sort_column
+      sortable_columns.include?(params[:column]) ? params[:column] : "UID"
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 
     
