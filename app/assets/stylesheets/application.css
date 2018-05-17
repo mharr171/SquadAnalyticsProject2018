@@ -18,12 +18,28 @@ body {
   padding: 25px;
 }
 
+.pos-table .pos-tr .pos-td {
+	padding: 0 5px;
+	font-size: 75%;
+	margin-top: -5px;
+}
+
+.pos-table .pos-tr:nth-child(4){
+	border-top: 2px solid rgba(0,0,0,0.3);
+}
+
 .pos-table {
-	width: 50%;
+	border: 2px solid rgba(0,0,0,0.3);
+}
+
+.pos-tr {
+	text-align: center;
+	margin: -10px;
 }
 
 .pos-td {
 	text-align: center;
+	margin: -10px;
 }
 
 .green {
@@ -31,11 +47,11 @@ body {
 }
 
 .yellow {
-	color: rgb(193, 193, 42);
+	color: rgb(232, 204, 83);
 }
 
-.gray {
-	color: rgba(0, 0, 0, 0.1);
+.grey {
+	color: rgba(0, 0, 0, 0.3);
 }
 
 .center {
