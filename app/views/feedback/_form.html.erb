@@ -1,0 +1,22 @@
+<%= form_for feedback, url: feedback_index_path do |form| %>
+  <% if feedback.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(feedback.errors.count, "error") %> prohibited this feedback from being saved:</h2>
+
+      <ul>
+      <% feedback.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <h3>I want to hear your feedback</h3>
+    <textarea class="textarea" placeholder="It would be super awesome if this project included..." rows="5"></textarea>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'button is-primary' %>
+  </div>
+<% end %>

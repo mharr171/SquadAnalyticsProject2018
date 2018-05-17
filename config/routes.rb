@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :feedback
+
   resources :squad_dnas
   resources :squads do
     post 'import_squad_datum'
@@ -9,7 +11,6 @@ Rails.application.routes.draw do
   end
   resources :squad_data
   get 'welcome/index'
-
   devise_for :users
   root 'welcome#index'
 
