@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180510131042) do
+ActiveRecord::Schema.define(version: 20180517103048) do
 
   create_table "players", force: :cascade do |t|
     t.integer "uid"
@@ -173,6 +173,21 @@ ActiveRecord::Schema.define(version: 20180510131042) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "squad_id"
+    t.integer "pos_st"
+    t.integer "pos_aml"
+    t.integer "pos_amc"
+    t.integer "pos_amr"
+    t.integer "pos_ml"
+    t.integer "pos_mc"
+    t.integer "pos_mr"
+    t.integer "pos_wbl"
+    t.integer "pos_dm"
+    t.integer "pos_wbr"
+    t.integer "pos_dl"
+    t.integer "pos_dc"
+    t.integer "pos_dr"
+    t.integer "pos_sw"
+    t.integer "pos_gk"
     t.index ["squad_id"], name: "index_players_on_squad_id"
   end
 

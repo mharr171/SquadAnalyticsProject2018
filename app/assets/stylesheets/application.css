@@ -18,3 +18,26 @@ body {
   padding: 25px;
 }
 
+.pos-table {
+	width: 50%;
+}
+
+.pos-td {
+	text-align: center;
+}
+
+.green {
+	color: rgb(25, 196, 71);
+}
+
+.yellow {
+	color: rgb(193, 193, 42);
+}
+
+.gray {
+	color: rgba(0, 0, 0, 0.1);
+}
+
+.center {
+	text-align: center;
+}

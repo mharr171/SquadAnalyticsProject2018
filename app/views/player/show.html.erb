@@ -1,10 +1,172 @@
 <div class="columns">
+
   <div class="column">
 		<%= link_to "Back to Squad", squad_path(@squad), class:"button" %>
     <h2><%= @player.name %></h2>
-  </div>
-  <div class="column">
 
+		<table class='pos-table'>
+      <tr>
+        <td class='pos-td'></td>
+        <td class='pos-td'>
+          <% if @player.pos_st == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_st == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+        <td class='pos-td'></td>
+      </tr>
+      <tr>
+        <td class='pos-td'>
+          <% if @player.pos_aml == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_aml == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+        <td class='pos-td'>
+          <% if @player.pos_amc == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_amc == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+        <td class='pos-td'>
+          <% if @player.pos_amr == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_amr == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class='pos-td'>
+          <% if @player.pos_ml == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_ml == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+        <td class='pos-td'>
+          <% if @player.pos_mc == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_mc == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+        <td class='pos-td'>
+          <% if @player.pos_mr == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_mr == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class='pos-td'>
+          <% if @player.pos_wbl == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_wbl == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+        <td class='pos-td'>
+          <% if @player.pos_dm == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_dm == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+        <td class='pos-td'>
+          <% if @player.pos_wbr == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_wbr == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class='pos-td'>
+          <% if @player.pos_dl == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_dl == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+        <td class='pos-td'>
+          <% if @player.pos_dc == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_dc == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+        <td class='pos-td'>
+          <% if @player.pos_dr == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_dr == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class='pos-td'></td>
+        <td class='pos-td'>
+          <% if @player.pos_sw == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_sw == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+        <td class='pos-td'></td>
+      </tr>
+      <tr>
+        <td class='pos-td'></td>
+        <td class='pos-td'>
+          <% if @player.pos_gk == 1 %>
+          <i class="fas fa-circle green"></i>
+          <% elsif @player.pos_gk == 2 %>
+          <i class="far fa-dot-circle yellow"></i>
+          <% else %>
+          <i class="far fa-circle grey"></i>
+          <% end %>
+        </td>
+        <td class='pos-td'></td>
+      </tr>
+    </table>
+
+
+
+  </div>
+
+  <div class="column">
 	<% if @player.position != "GK" %>
     <div class="columns">
 		  <div class="column">
