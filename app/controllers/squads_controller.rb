@@ -190,28 +190,28 @@ class SquadsController < ApplicationController
           positions.each do |pos|
             case pos
             when "ST"
-              player.pos_st += 1
+              player.pos_st = 1
             when "AM"
-              player.pos_amr += 1 if sides.include? "R"
-              player.pos_amc += 1 if sides.include? "C"
-              player.pos_aml += 1 if sides.include? "L"
+              player.pos_amr = 1 if sides.include? "R"
+              player.pos_amc = 1 if sides.include? "C"
+              player.pos_aml = 1 if sides.include? "L"
             when "M"
-              player.pos_mr += 1 if sides.include? "R"
-              player.pos_mc += 1 if sides.include? "C"
-              player.pos_ml += 1 if sides.include? "L"
+              player.pos_mr = 1 if sides.include? "R"
+              player.pos_mc = 1 if sides.include? "C"
+              player.pos_ml = 1 if sides.include? "L"
             when "DM"
-              player.pos_dm += 1
+              player.pos_dm = 1
             when "WB"
-              player.pos_wbr += 1 if sides.include? "R"
-              player.pos_wbl += 1 if sides.include? "L"
+              player.pos_wbr = 1 if sides.include? "R"
+              player.pos_wbl = 1 if sides.include? "L"
             when "D"
-              player.pos_dr += 1 if sides.include? "R"
-              player.pos_dc += 1 if sides.include? "C"
-              player.pos_dl += 1 if sides.include? "L"
+              player.pos_dr = 1 if sides.include? "R"
+              player.pos_dc = 1 if sides.include? "C"
+              player.pos_dl = 1 if sides.include? "L"
             when "SW"
-              player.pos_dm += 1
+              player.pos_dm = 1
             when "GK"
-              player.pos_gk += 1
+              player.pos_gk = 1
             end
           end
         end
@@ -224,28 +224,28 @@ class SquadsController < ApplicationController
           positions.each do |pos|
             case pos
             when "ST"
-              player.pos_st += 1
+              player.pos_st = 2
             when "AM"
-              player.pos_amr += 1 if sides.include? "R"
-              player.pos_amc += 1 if sides.include? "C"
-              player.pos_aml += 1 if sides.include? "L"
+              player.pos_amr = 2 if sides.include? "R"
+              player.pos_amc = 2 if sides.include? "C"
+              player.pos_aml = 2 if sides.include? "L"
             when "M"
-              player.pos_mr += 1 if sides.include? "R"
-              player.pos_mc += 1 if sides.include? "C"
-              player.pos_ml += 1 if sides.include? "L"
+              player.pos_mr = 2 if sides.include? "R"
+              player.pos_mc = 2 if sides.include? "C"
+              player.pos_ml = 2 if sides.include? "L"
             when "DM"
-              player.pos_dm += 1
+              player.pos_dm = 2
             when "WB"
-              player.pos_wbr += 1 if sides.include? "R"
-              player.pos_wbl += 1 if sides.include? "L"
+              player.pos_wbr = 2 if sides.include? "R"
+              player.pos_wbl = 2 if sides.include? "L"
             when "D"
-              player.pos_dr += 1 if sides.include? "R"
-              player.pos_dc += 1 if sides.include? "C"
-              player.pos_dl += 1 if sides.include? "L"
+              player.pos_dr = 2 if sides.include? "R"
+              player.pos_dc = 2 if sides.include? "C"
+              player.pos_dl = 2 if sides.include? "L"
             when "SW"
-              player.pos_dm += 1
+              player.pos_dm = 2
             when "GK"
-              player.pos_gk += 1
+              player.pos_gk = 2
             end
           end
         end
