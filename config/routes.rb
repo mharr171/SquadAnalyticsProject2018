@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     post 'delete_squad_datum'
     post 'calculate_ratings'
     resources :squad_dnas
+    resources :player
   end
   resources :squad_data
   get 'welcome/index'
@@ -12,11 +13,6 @@ Rails.application.routes.draw do
   devise_for :users
   root 'welcome#index'
 
-  get 'player/index'
-	get 'player/indexsort'
-  get 'player/indexdnasort'
-
-  get 'player/show'
   post 'deletesquad' => 'player#deletesquad', as: :deletesquad
 
   post 'loadfiles' => 'player#loadfiles', as: :loadfiles

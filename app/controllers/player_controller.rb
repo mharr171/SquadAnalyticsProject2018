@@ -19,6 +19,8 @@ class PlayerController < ApplicationController
   end
 
   def show
+    @player = Player.find(params[:id])
+    @squad = Squad.find(params[:squad_id])
   end
 
   def deletesquad

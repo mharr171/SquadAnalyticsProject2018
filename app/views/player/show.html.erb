@@ -1,2 +1,391 @@
-<h1>Player#show</h1>
-<p>Find me in app/views/player/show.html.erb</p>
+<div class="columns">
+  <div class="column">
+		<%= link_to "Back to Squad", squad_path(@squad), class:"button" %>
+    <h2><%= @player.name %></h2>
+  </div>
+  <div class="column">
+
+	<% if @player.position != "GK" %>
+    <div class="columns">
+		  <div class="column">
+		    <table class="table">
+					<thead>
+						<tr>
+							<th colspan="2">Technical</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><abbr title="Corners">Cor</abbr></td>
+							<td><%= @player.cor %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Crossing">Cro</abbr></td>
+							<td><%= @player.cro %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Dribbling">Dri</abbr></td>
+							<td><%= @player.dri %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Finishing">Fin</abbr></td>
+							<td><%= @player.fin %></td>
+						</tr>
+						<tr>
+							<td><abbr title="First Touch">Fir</abbr></td>
+							<td><%= @player.fir %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Free Kick Taking">Fre</abbr></td>
+							<td><%= @player.fre %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Heading">Hea</abbr></td>
+							<td><%= @player.hea %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Long Shots">Lon</abbr></td>
+							<td><%= @player.lon %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Long Throws">Lth</abbr></td>
+							<td><%= @player.lth %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Marking">Mar</abbr></td>
+							<td><%= @player.mar %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Passing">Pas</abbr></td>
+							<td><%= @player.pas %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Penalty Taking">Pen</abbr></td>
+							<td><%= @player.pen %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Tackling">Tck</abbr></td>
+							<td><%= number_with_precision(@player.tck,precision:0) %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Technical">Tec</abbr></td>
+							<td><%= @player.tec %></td>
+						</tr>
+					</tbody>
+				</table>
+		  </div>
+		  <div class="column">
+		    <table class="table">
+					<thead>
+						<tr>
+							<th colspan="2">Mental</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><abbr title="Aggression">Agg</abbr></td>
+							<td><%= @player.agg %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Anticipation">Ant</abbr></td>
+							<td><%= @player.ant %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Bravery">Bra</abbr></td>
+							<td><%= @player.bra %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Composure">Com</abbr></td>
+							<td><%= @player.com %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Concentration">Cnt</abbr></td>
+							<td><%= @player.cnt %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Decisions">Dec</abbr></td>
+							<td><%= @player.dec %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Determination">Det</abbr></td>
+							<td><%= @player.det %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Flair">Fla</abbr></td>
+							<td><%= @player.fla %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Leadership">Ldr</abbr></td>
+							<td><%= @player.ldr %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Off The Ball">Otb</abbr></td>
+							<td><%= @player.otb %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Positioning">Pos</abbr></td>
+							<td><%= @player.pos %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Teamwork">Tea</abbr></td>
+							<td><%= @player.tea %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Vision">Vis</abbr></td>
+							<td><%= @player.vis %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Work Rate">Wor</abbr></td>
+							<td><%= @player.wor %></td>
+						</tr>
+					</tbody>
+				</table>
+		  </div>
+			<div class="column">
+		    <table class="table">
+					<thead>
+						<tr>
+							<th colspan="2">Physical</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><abbr title="Acceleration">Acc</abbr></td>
+							<td><%= @player.acc %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Agility">Agi</abbr></td>
+							<td><%= @player.agi %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Balance">Bal</abbr></td>
+							<td><%= @player.bal %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Jumping Reach">Jum</abbr></td>
+							<td><%= @player.jum %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Natural Fitness">Nat</abbr></td>
+							<td><%= @player.nat %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Pace">Pac</abbr></td>
+							<td><%= @player.pac %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Stamina">Sta</abbr></td>
+							<td><%= @player.sta %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Strength">Str</abbr></td>
+							<td><%= @player.str %></td>
+						</tr>
+					</tbody>
+				</table>
+		  </div>
+		</div>
+  </div>
+	<% else %>
+	<div class="columns">
+		  <div class="column">
+		    <table class="table">
+					<thead>
+						<tr>
+							<th colspan="2">Goalkeeping</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><abbr title="Aerial Reach">Aer</abbr></td>
+							<td><%= @player.aer %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Command of Area">Cmd</abbr></td>
+							<td><%= @player.cmd %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Communication">Com</abbr></td>
+							<td><%= @player.com %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Eccentricity">Ecc</abbr></td>
+							<td><%= @player.ecc %></td>
+						</tr>
+						<tr>
+							<td><abbr title="First Touch">Fir</abbr></td>
+							<td><%= @player.fir %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Handling">Han</abbr></td>
+							<td><%= @player.han %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Kicking">Kic</abbr></td>
+							<td><%= @player.kic %></td>
+						</tr>
+						<tr>
+							<td><abbr title="One On Ones">1v1</abbr></td>
+							<td><%= @player.onevone %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Passing">Pas</abbr></td>
+							<td><%= @player.pas %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Reflexes">Ref</abbr></td>
+							<td><%= @player.ref %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Rushing Out">Rus</abbr></td>
+							<td><%= @player.rus %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Tendency To Punch">Pun</abbr></td>
+							<td><%= @player.pun %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Throwing">Thr</abbr></td>
+							<td><%= @player.thr %></td>
+						</tr>
+					</tbody>
+				</table>
+		  </div>
+		  <div class="column">
+		    <table class="table">
+					<thead>
+						<tr>
+							<th colspan="2">Mental</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><abbr title="Aggression">Agg</abbr></td>
+							<td><%= @player.agg %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Anticipation">Ant</abbr></td>
+							<td><%= @player.ant %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Bravery">Bra</abbr></td>
+							<td><%= @player.bra %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Composure">Com</abbr></td>
+							<td><%= @player.com %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Concentration">Cnt</abbr></td>
+							<td><%= @player.cnt %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Decisions">Dec</abbr></td>
+							<td><%= @player.dec %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Determination">Det</abbr></td>
+							<td><%= @player.det %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Flair">Fla</abbr></td>
+							<td><%= @player.fla %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Leadership">Ldr</abbr></td>
+							<td><%= @player.ldr %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Off The Ball">Otb</abbr></td>
+							<td><%= @player.otb %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Positioning">Pos</abbr></td>
+							<td><%= @player.pos %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Teamwork">Tea</abbr></td>
+							<td><%= @player.tea %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Vision">Vis</abbr></td>
+							<td><%= @player.vis %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Work Rate">Wor</abbr></td>
+							<td><%= @player.wor %></td>
+						</tr>
+					</tbody>
+				</table>
+		  </div>
+			<div class="column">
+		    <table class="table">
+					<thead>
+						<tr>
+							<th colspan="2">Physical</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><abbr title="Acceleration">Acc</abbr></td>
+							<td><%= @player.acc %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Agility">Agi</abbr></td>
+							<td><%= @player.agi %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Balance">Bal</abbr></td>
+							<td><%= @player.bal %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Jumping Reach">Jum</abbr></td>
+							<td><%= @player.jum %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Natural Fitness">Nat</abbr></td>
+							<td><%= @player.nat %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Pace">Pac</abbr></td>
+							<td><%= @player.pac %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Stamina">Sta</abbr></td>
+							<td><%= @player.sta %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Strength">Str</abbr></td>
+							<td><%= @player.str %></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table">
+					<thead>
+						<tr>
+							<th colspan="2">Technical</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><abbr title="Free Kick Taking">Fre</abbr></td>
+							<td><%= @player.fre %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Penalty Taking">Pen</abbr></td>
+							<td><%= @player.pen %></td>
+						</tr>
+						<tr>
+							<td><abbr title="Technique">Tec</abbr></td>
+							<td><%= @player.tec %></td>
+						</tr>
+					</tbody>
+				</table>
+		  </div>
+		</div>
+  </div>
+	<% end %>
+  <div class="column">
+    [under construction]
+  </div>
+</div>
