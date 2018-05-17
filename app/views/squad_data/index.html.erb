@@ -2,7 +2,7 @@
 
 <h1>Squad Data</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Load squad data</th>
@@ -14,7 +14,7 @@
   <tbody>
     <% @squad_data.each do |squad_datum| %>
       <tr>
-        <td><%= simple_format(squad_datum.load_squad_data) %></td>
+        <td><%= simple_format(squad_datum.load_squad_data)[3...28] %></td>
         <!-- <td>< %= simple_format(squad_datum.update_squad_data) %></td> -->
         <td><%= link_to 'Show', squad_datum %></td>
         <td><%= link_to 'Edit', edit_squad_datum_path(squad_datum) %></td>
@@ -27,7 +27,7 @@
 <br>
 
 <% if @squad_data.length == 1 %>
-  -
+  
 <% else %>
   <%= link_to 'New Squad Datum', new_squad_datum_path %>
 <% end %>

@@ -1,18 +1,5 @@
 <% if user_signed_in? %>
-	<ul>
-	  <li>
-	    Signed in as <%= link_to current_user.email, edit_user_registration_path(current_user) %>
-	  </li>
-	  <li>
-	    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-	  </li>
-		<li>
-		<%= link_to "Squad Data", squad_data_path %>
-		</li>
-		<li>
-		<%= link_to "Squads", squads_path %>
-		</li>
-	</ul>
+	
 <% else %>
 	<h1>Welcome to Squad Analytics Project 2018</h1>
 

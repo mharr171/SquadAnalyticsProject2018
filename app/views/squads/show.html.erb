@@ -12,16 +12,16 @@
 
 
 <% if @squad.players.length >=1 %>
-	<%= button_to 'Delete Squad Data', squad_delete_squad_datum_path(@squad) %>
+	<%= button_to 'Delete Squad Data', squad_delete_squad_datum_path(@squad), class:"button is-warning" %>
 <% else %>
-	<%= button_to 'Import Squad Data', squad_import_squad_datum_path(@squad) %>
+	<%= button_to 'Import Squad Data', squad_import_squad_datum_path(@squad), class:"button is-primary" %>
 <% end %>
 
 
 <% if @squad_dna.empty? %>
-	<%= link_to 'Squad DNA', squad_squad_dnas_path(@squad) %>
+	<%= link_to 'Squad DNA', squad_squad_dnas_path(@squad), class:"button is-primary is-small" %>
 <% else %>
-	<%= link_to 'Squad DNA', squad_squad_dnas_path(@squad) %><%= button_to 'Calculate Ratings', squad_calculate_ratings_path(@squad) %>
+	<%= link_to 'Squad DNA', squad_squad_dnas_path(@squad), class:"button is-primary is-small" %><%= button_to 'Calculate Ratings', squad_calculate_ratings_path(@squad), class:"button is-info" %>
 <% end %>
 
 

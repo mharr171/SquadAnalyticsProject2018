@@ -2,10 +2,11 @@
 
 <h1>Squad DNA</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Squad</th>
+      <th colspan="3"></th>
       <th>Cor m</th>
       <th>Cro m</th>
       <th>Dri m</th>
@@ -70,7 +71,7 @@
       <th>Inc ris h</th>
       <th>Hig ris h</th>
       <th>Ver ris h</th>
-      <th colspan="3"></th>
+      
     </tr>
   </thead>
 
@@ -78,6 +79,9 @@
     <% @squad_dnas.each do |squad_dna| %>
       <tr>
         <td><%= squad_dna.squad.team_name %></td>
+        <td><%= link_to 'Show', squad_squad_dna_path(params[:squad_id],squad_dna) %></td>
+        <td><%= link_to 'Edit', edit_squad_squad_dna_path(params[:squad_id],squad_dna) %></td>
+        <td><%= link_to 'Destroy', squad_squad_dna_path(params[:squad_id],squad_dna), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= squad_dna.cor_m %></td>
         <td><%= squad_dna.cro_m %></td>
         <td><%= squad_dna.dri_m %></td>
@@ -142,9 +146,7 @@
         <td><%= squad_dna.inc_ris_h %></td>
         <td><%= squad_dna.hig_ris_h %></td>
         <td><%= squad_dna.ver_ris_h %></td>
-        <td><%= link_to 'Show', squad_squad_dna_path(params[:squad_id],squad_dna) %></td>
-        <td><%= link_to 'Edit', edit_squad_squad_dna_path(params[:squad_id],squad_dna) %></td>
-        <td><%= link_to 'Destroy', squad_squad_dna_path(params[:squad_id],squad_dna), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
       </tr>
     <% end %>
   </tbody>
@@ -155,7 +157,7 @@
 
 
 <% if @squad_dnas.length == 1 %>
-  -
+  
 <% else %>
   <%= link_to 'New Squad Dna', new_squad_squad_dna_path(@squad) %>
 <% end %>
