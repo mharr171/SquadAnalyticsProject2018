@@ -57,3 +57,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pg', group: [:production, :staging]
 
 gem 'devise'
+
+gem 'activeadmin'
